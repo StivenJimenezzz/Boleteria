@@ -3,9 +3,9 @@ package com.boleteria.Boleteria.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.modelo.EstadoCompra;
-import org.example.modelo.MetodoPago;
-import org.example.modelo.Zona;
+import com.boleteria.Boleteria.Modelo.EstadoCompra;
+import com.boleteria.Boleteria.Modelo.MetodoPago;
+import com.boleteria.Boleteria.Modelo.Zona;
 
 import java.time.LocalDateTime;
 import java.util.Map;

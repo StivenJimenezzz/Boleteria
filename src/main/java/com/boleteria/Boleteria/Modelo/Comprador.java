@@ -1,4 +1,4 @@
-package com.boleteria.Boleteria.modelo;
+package com.boleteria.Boleteria.Modelo;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

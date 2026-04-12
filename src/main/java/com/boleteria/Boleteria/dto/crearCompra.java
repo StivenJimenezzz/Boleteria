@@ -3,7 +3,7 @@ package com.boleteria.Boleteria.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.modelo.MetodoPago;
+import com.boleteria.Boleteria.Modelo.MetodoPago;
 
 @Getter
 @Setter
