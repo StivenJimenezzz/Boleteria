@@ -25,9 +25,12 @@ public class CompraBoletas {
     private int cantidad;
     private double total;
 
+
     @Enumerated(EnumType.STRING)
     private MetodoPago metodoPago;
 
     @Enumerated(EnumType.STRING)
     private EstadoCompra estado;
+
+    private String comprobante;
 }

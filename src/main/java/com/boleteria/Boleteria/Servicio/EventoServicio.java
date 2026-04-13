@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class EventoServicio {
 
-    private final EventoRepositorio eventoRepository;
+    private static EventoRepositorio eventoRepository;
 
     // Constructor
     public EventoServicio(EventoRepositorio eventoRepository) {
@@ -22,7 +22,7 @@ public class EventoServicio {
     }
 
     //  se lista evento
-    public List<Evento> listarEventos() {
+    public static List<Evento> listarEventos() {
         return eventoRepository.findAll();
     }
 }
