@@ -2,29 +2,28 @@ package com.boleteria.Boleteria.Controlador;
 
 import com.boleteria.Boleteria.Modelo.Evento;
 import com.boleteria.Boleteria.Servicio.EventoServicio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/eventos")
+@CrossOrigin(origins = "*")
 public class EventoControlador {
 
-    private final EventoServicio eventoServicio;
+    @Autowired
+    private EventoServicio eventoServicio;
 
-    public EventoControlador(EventoServicio eventoServicio) {
-        this.eventoServicio = eventoServicio;
-    }
-
-    // 🔥 Crear evento
+    // RQ 01 - CREAR EVENTO
     @PostMapping
     public Evento crearEvento(@RequestBody Evento evento) {
         return eventoServicio.crearEvento(evento);
     }
 
-    // 🔥 Listar eventos
-    @GetMapping
-    public List<Evento> listarEventos() {
+    // RQ 05 LISTAR EVENTOS
+    @GetMapping("/disponibles")
+    public List<Evento> listarDisponibles() {
         return eventoServicio.listarEventos();
     }
 }
